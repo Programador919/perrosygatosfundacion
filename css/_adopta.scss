@@ -1,0 +1,253 @@
+*{
+    @include reset-pm();
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-pila;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: .5cm;
+}
+a {
+    text-decoration: none;
+}
+.container1 {
+    margin: auto;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+.btn {
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 23px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin: 5px 40px;
+    &-dark {
+        background: $secondary-color ;
+        border: 1px solid $secondary-color;
+        color: white;
+    }
+}
+.navbarheader {
+    position: fixed;
+    width: 100%;
+    
+}
+.navbar-brand {
+    margin: 0 50px;
+}
+.navbar-nav {
+    margin-left: 100px;
+}
+ul li {
+    margin-left: 20px;
+}
+
+/* -- showcase -- */
+#adoptable1 {
+    height: 100vh;
+    padding: 80px 0;
+    background: url('../img/perro-mujer.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    h1 {
+        width: 50%;
+        color: rgb(2, 37, 37);
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        width: 50%;
+        color: #e20505;
+        padding-top: 10px;
+        text-align: justify;
+    }
+}/* fin showcase */
+
+/* -- aboutadop -- */
+#aboutadop {
+    padding: 100px 0;
+    background-color: rgb(232, 234, 233);
+    h3 {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    p {
+        text-align: justify;
+        font-size: large;
+    }
+    img {
+        width: 100%;
+    }
+    .aboutadop-flex1 {
+        background-color:rgb(232, 234, 233);
+        display: flex;
+        &-descripcion1 {
+            flex: 1;
+            padding: 20px 40px;
+            text-align: justify;
+        }
+        &-image {
+            flex: 1;
+            width: 50%;
+            margin-top: 50px;
+        }
+    }
+}/* fin about */
+
+/* -- informacionadop -- */
+#informacionadop {
+    padding: 100px 0;
+    background: rgb(238, 236, 236);
+    h3 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    h2 {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .informacionadop-flex {
+        display: flex;
+        gap: 15px;
+        &-box {
+        background: #fff;
+        padding: 50px 20px;
+        text-align: center;
+        border-radius: 20px;
+        h3 {
+            padding: 10px 0;
+        }
+        p {
+            text-align: justify;
+        }
+        }
+        &-box {
+            background-color: #dbd7d7af;
+            li {
+                text-align: left;
+                padding-left: 10px;
+            }
+            ol {
+                list-style-type: upper-roman;
+            }
+        }
+    }
+}/* fin informacion */
+
+
+/* -- inicio perros y gatos --*/
+#perrosygatos {
+    background-color: #83df7118;
+    .container2 {
+        padding: 30px 0;
+        h2 {
+            text-align: center;
+        }
+        .firulais {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            grid-gap: 80px;
+            margin: 40px;
+            margin-right: 80px;
+        }
+        .tarjeta {
+            border: 3px solid black; 
+            border-radius: 7px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: all 400ms ease;
+            color: rgb(10, 3, 3);
+            font-family: 'Courier New', Courier, monospace;
+            width: 300px;
+            height: 300px;
+            &-img {
+                width: 300px;
+            }
+            &:hover {
+                box-shadow: 20px 20px 20px rgba(47, 24, 59, 0.66);
+                transform: translateY(-5%);
+            }
+            &-body:hover {
+                background-color: rgb(117, 199, 199);
+                color: #fff;
+            }
+            &-body {
+                h4 {
+                    font-weight: 800;
+                }
+                p {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}/* -- fin perros y gatos --*/
+
+
+/* -- media query -- */
+@media (max-width: 991.98px) {
+    .aboutadop-flex1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .informacionadop-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #titulo1 {
+        font-size: 13px;
+    }
+    .container1 {
+        .titulofundacion1 {
+        font-size: 20px;
+        }
+        #show1 {
+            width: 100%;
+            font-size: 20px;
+            margin: 2px;
+            text-align: justify;
+            
+        }
+    }
+    .tarjeta-body {
+        h4 {
+            font-size: 15px;
+        }
+        p {
+            font-size: 15px;
+            text-align: justify;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .container1 {
+        #show1 {
+            font-size: 15px;
+        }
+    }
+}

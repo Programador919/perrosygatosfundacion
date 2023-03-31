@@ -1,0 +1,204 @@
+@import 'utils';
+
+/* -- pagina apadrina -- */
+*{
+    @include reset-pm();
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-pila;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: .7cm;
+}
+a {
+    text-decoration: none;
+}
+.containerapa11 {
+    margin: auto;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+.btn {
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 23px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin: 5px 40px;
+    &-dark {
+        background: $secondary-color ;
+        border: 1px solid $secondary-color;
+        color: white;
+    }
+}
+.navbarheader {
+    position: fixed;
+    width: 100%;
+}
+.navbar-brand {
+    margin: 0 50px;
+}
+.navbar-nav {
+    margin-left: 100px;
+}
+ul li {
+    margin-left: 20px;
+}
+
+/* -- inicio apadrina -- */
+#apadrina {
+    height: 100vh;
+    padding-top : 80px ;
+    background: url('../img/apadrina3.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    h1 {
+        width: 50%;
+        color: rgb(2, 37, 37);
+    }
+    #apadri {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        width: 50%;
+        border-radius: 20px;
+        line-height: normal;
+        background-color: #fefeff82;
+        color: #010f23;
+        padding: 10px;
+        margin: 10px 0;
+        text-align: justify;
+    }
+}/* fin apadrina */
+
+/* --  inicio porqueapadrinar -- */
+#porqueapadrinar {
+    padding: 100px 0;
+    background-color: rgb(235, 246, 241);
+    h3 {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    p {
+        text-align: justify;
+        font-size: large;
+    }
+    img {
+        width: 100%;
+    }
+    .porqueapadrinar-flex11 {
+        background-color: rgb(235, 246, 241);
+        display: flex;
+        &-image {
+            flex: 1;
+            width: 50%;
+            margin: 5%;
+        }
+        &-descripcion11 {
+            flex: 1;
+            padding: 85px 40px 0 40px;
+            text-align: justify;
+            p {
+                font-size: large;
+            }
+        }
+    }
+}/* fin porqueapadrinar */
+
+/* -- inicio deberesyderechos -- */
+#deberesyderechos {
+    padding: 100px 0;
+    background: rgb(238, 236, 236);
+    h3 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    h2 {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .deberesyderechos-flex {
+        display: flex;
+        gap: 15px;
+        &-box {
+        padding: 50px 0;
+        margin: 0 30px;
+        text-align: center;
+        width: 50%;
+        h3 {
+            padding: 10px 0;
+        }
+        }
+        &-box {
+            li {
+                text-align: justify;
+                padding-left: 20px;
+            }
+            ol {
+                list-style-type: upper-roman;
+            }
+        }
+    }
+}/* fin deberesyderechos */
+
+/* -- media query -- */
+@media (max-width: 991.98px) {
+    .porqueapadrinar-flex11 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .deberesyderechos-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #apadrina {
+        .containerapa11 {
+            .titulofundacion11 {
+                font-size: 2rem;
+            }
+            .dispaly-1 {
+                width: 100%;
+                font-size: 20px;
+            }
+            #apadri {
+                width: 100%;
+                font-size: 1rem;
+                margin: 2px;
+                text-align: justify;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    #apadrina {
+        .containerapa11 {
+            #apadri {
+            font-size: 11px;
+            }
+        }
+    }
+    #correo {
+        font-size: 8px;
+    }
+}/* -- fin media query -- */

@@ -1,0 +1,234 @@
+@import 'utils';
+
+/* -- pagina contacto -- */
+
+*{
+    @include reset-pm();
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-pila;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: .7cm;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbarheader {
+    position: fixed;
+    width: 100%;
+    
+}
+.navbar-brand {
+    margin: 0 50px;
+}
+.navbar-nav {
+    margin-left: 100px;
+}
+ul li {
+    margin-left: 20px;
+}
+
+/* -- inicio apoya -- */
+#contacto {
+    height: 100vh;
+    padding: 90px 0;
+    background: url('../img/contacto2.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    .container1111 {
+        padding-left: 20px;
+        .titulocontacto {
+            font-size: 3rem;
+        }
+        .display-1  {
+            width: 50%;
+            font-size: 3rem;
+            color: rgb(28, 199, 39);
+        }
+        #tituloparrafo {
+            width: 50%;
+            font-size: 20px;
+            color: rgb(2, 46, 40);
+            text-align: justify;
+        }
+    }
+}/* fin apoya */
+
+/* -- ubicacion -- */
+#ubicacion {
+    background: rgb(248, 233, 233);
+    padding: 20px 40px;
+    .tituloubicacion {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .direccion {
+        display: flex;
+        gap: 50px;
+        .titulodireccion {
+            width: 50%;
+            h1 {
+                text-align: center;
+                padding-bottom: 10px ;
+            }
+            h4 {
+                padding-bottom: 15px;
+            }
+            p {
+                text-align: justify;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        iframe {
+            align-items: center;
+        }
+    }
+}
+
+/* -- inicio contacto -- */
+
+#contacto1 {
+    background-color: blue;
+    padding: 100px 100px;
+        .conta {
+            text-align: justify;
+            color: white;
+        }
+        .contacto2 {
+            margin: 15px;
+        }
+}
+
+#efecto {
+    position: relative;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: #350642;
+    color: #fcf8fc;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+    &:hover {color: #fff;}
+    & span {
+        position: absolute;
+        background: #fff;
+        transition: .5s;
+        &:nth-child(1) {
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: -100%;
+        }
+        &:nth-child(2) {
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            right: -100%;
+        }
+        &:nth-child(3) {
+            width: 1px;
+            height: 100%;
+            bottom: -100%;
+            left: 0;
+        }
+        &:nth-child(4) {
+            width: 1px;
+            height: 100%;
+            top: -100%;
+            right: 0;
+        }
+    }
+    &:hover span:nth-child(1) {left: 0;}
+    &:hover span:nth-child(2) {right: 0;}
+    &:hover span:nth-child(3) {bottom: 0;}
+    &:hover span:nth-child(4) {top: 0;}
+}/* -- fin contacto -- */
+
+
+/* -- media query --*/
+
+@media (max-width: 900px) {
+    #contacto .container1111 {
+        padding: 25px;
+        .titulocontacto {
+            font-size: 2rem;
+        }
+        .display-1 {
+            font-size: 2rem;
+        }
+        #tituloparrafo {
+            width: 80%;
+            font-size: 18px;
+        }
+    }
+    #ubicacion {
+        .direccion {
+            display: flex;
+            flex-direction: column;
+            .titulodireccion {
+                width: 100%;
+            }
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+    #contacto1 {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    #contacto .container1111 {
+        padding: 10px 2px;
+        .titulocontacto {
+            font-size: 1rem;
+        }
+        .display-1 {
+            font-size: 1.5rem;
+        }
+        #tituloparrafo {
+            width: 100%;
+            font-size: 12px;
+        }
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        column-width: 100%;
+        margin: 0;
+        padding: 0;
+        .col-4 {
+            .form-control {
+                width: 90%;
+            }
+        }
+    }
+}/* -- fin media query --*/
